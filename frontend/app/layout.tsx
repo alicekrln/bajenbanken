@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bajencoin",
+  title: "Bajenbanken",
   description: "Hantera din ekonomi som en riktig bajare",
 };
 

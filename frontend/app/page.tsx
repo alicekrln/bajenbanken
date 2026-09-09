@@ -12,7 +12,7 @@ export default function Home() {
               Banken som sjunger i grönt och vitt
             </h1>
             <p className='mt-5 max-w-md text-lg text-muted-foreground'>
-              Vi på Bajen Bank tror på varje bajares rätt till en till bärs.
+              Vi på Bajenbanken tror på varje bajares rätt till en till bärs.
               Registrera dig idag och öka bärsbudgeten på bara några klick.
             </p>
             <div className='mt-8 flex flex-wrap gap-3'>
