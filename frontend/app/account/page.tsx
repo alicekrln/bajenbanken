@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function Account() {
   const [value, setValue] = useState('')
-  const [amount, setAmount] = useState('0')
+  const [balance, setBalance] = useState('0')
   const [token, setToken] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
@@ -21,7 +21,7 @@ export default function Account() {
       body: JSON.stringify({ token: t }),
     })
       .then((res) => res.json())
-      .then((data) => setAmount(data.amount))
+      .then((data) => setBalance(data.amount))
   }, [])
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
@@ -46,7 +46,7 @@ export default function Account() {
       )
       const data = await res.json()
       console.log('Balance:', data.amount)
-      setAmount(data.amount)
+      setBalance(data.amount)
       setSuccess('Klirr på kontot!')
       setBusy(false)
       setValue('')
@@ -65,7 +65,7 @@ export default function Account() {
             Hej där, ditt saldo är
           </p>
           <p className='font-black mt-2 text-6xl text-background'>
-            {amount} kr
+            {balance} kr
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export default function Account() {
               disabled={busy}
               className='mt-5 w-full rounded-full bg-primary px-6 py-3 font-bold text-background disabled:opacity-60'
             >
-              {busy ? 'Överför...' : 'Sätt in på kontot'}
+              Sätt in
             </button>
           </form>
 
