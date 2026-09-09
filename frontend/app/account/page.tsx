@@ -15,7 +15,7 @@ export default function Account() {
   useEffect(() => {
     const t = localStorage.getItem('token') || ''
     setToken(t)
-    fetch('http://127.0.0.1:3001/me/accounts', {
+    fetch('http://51.21.196.203:3001/me/accounts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: t }),
@@ -32,7 +32,7 @@ export default function Account() {
 
     try {
       const res = await fetch(
-        'http://127.0.0.1:3001/me/accounts/transactions',
+        'http://51.21.196.203:3001/me/accounts/transactions',
         {
           method: 'POST',
           headers: {

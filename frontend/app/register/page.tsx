@@ -15,7 +15,7 @@ export default function Register() {
     setError(null)
 
     try {
-      const res = await fetch('http://127.0.0.1:3001/users', {
+      const res = await fetch('http://51.21.196.203:3001/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
